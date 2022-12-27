@@ -17,14 +17,12 @@ There are 2 ways to boot the server. The first is to load it static. That means 
 ```python
 from ext.Server import Server
 
-
 server: Server = Server(docs_dir='docs', http_port=3033)
 server.start()
 ```
 The second way would be to start it with PHP. PHP should already be installed for this, but it doesn't matter if it is in the PATH or not. It is only important that the php-cgi.exe file exists in the given folder.
 ```python
 from ext.Server import Server
-
 
 server: Server = Server(docs_dir='docs', http_port=3033)
 server.activate_php(php_dir='C:\\php',
@@ -36,7 +34,6 @@ server.start()
 Events must be specified during initialization. The given method must accept ``socket.socket``, ``tuple`` and ``str``.
 ```python
 from ext.Server import Server
-
 
 def on_connect(s: socket.socket, addr: tuple, target_location: str) -> None:
     print(f'Connection from {addr}, target_location is {target_location}')
