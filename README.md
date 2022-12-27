@@ -12,7 +12,12 @@ A powerfull web server (GET and POST supported), with PHP, SASS and CSS integrat
 - Only Built-In Libraries
 
 # 📙 Usage 📙
-First you need to create a folder. In this folder you will find the files that should be accessible via the web server. Now you only have to start it.
+First you need to create a folder. In this folder you will find the files that should be accessible via the web server. Then we import the server class:
+```py
+from ext.Server import Server
+```
+
+Now you only have to start it.
 There are 2 ways to boot the server. The first is to load it static. That means PHP is not usable. This requires only 2 lines of code:
 ```python
 server: Server = Server(docs_dir='docs', http_port=3033)
