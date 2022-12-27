@@ -67,3 +67,9 @@ To remove a file extension from the PHP parser, you can simply do:
 ```python
 server.remove_from_whitelist_php('.extension')
 ```
+# 🚨 Errors 🚨
+Ehmmmm okay, before you all start yelling at me, I'm sorry. I really messed up the error handling, I'll make it better sometime. But hey, you can change the error 404 page. How?:
+
+```python
+server.error_pages['404'] = 'your/new/path.html' # Currently only Static Files are Supported
+```
