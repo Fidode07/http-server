@@ -72,3 +72,8 @@ Ehmmmm okay, before you all start yelling at me, I'm sorry. I really messed up t
 ```python
 server.error_pages['404'] = 'your/new/path.html' # Currently only Static Files are Supported
 ```
+
+# 🔎 Wait ... HOW??? 🔎
+Okay, now you know how to execute it. But wait ... How does the file search work exactly? Well, it's simple. Let's assume the user goes to the url ``http://example.org/test.php``. Then the Docs dir is searched for the ``test.php``. 
+
+But wait, what happens when the user goes to a URL like ``http://example.org/home``? Well, then the Docs dir is searched for a directory called ``home``. And in this ``home`` directory an ``index.*`` is searched (every extension that is on the whitelist is scanned).
